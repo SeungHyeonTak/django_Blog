@@ -1,0 +1,1 @@
+from django.urls import pathfrom .views import blog_list,blog_detail,blog_add,blog_deleteurlpatterns = [    path('',blog_list, name = 'list'),    path('detail/<int:pk>/',blog_detail, name = 'detail'),    path('add/',blog_add, name = 'add'),    path('<int:pk>/delete/',blog_delete, name = 'delete'),]
